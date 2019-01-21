@@ -84,6 +84,7 @@ public class RetryExecuteJobRunnable implements Runnable {
                     }
                     // 重试次数内执行 & 存在触发器执行节点
                     if (executeDetailRecord.getNedRetryCount() < configRetryMaxCount && bindNodes != null && bindNodes.size() > 0) {
+
                         // 设置重试次数
                         executeDetailRecord.setNedRetryCount(executeDetailRecord.getNedRetryCount() + 1);
 

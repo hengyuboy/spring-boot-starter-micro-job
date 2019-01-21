@@ -129,6 +129,7 @@ public class HeartSyncSaveNodeTriggerListener implements SmartApplicationListene
                                     if (!trigger.isAutoStart()) {
                                         jobExecuteService.removeJob(trigger.getTriggerKey());
                                     }
+
                                 }
                             }
                             // 遇到异常时清空缓存信息

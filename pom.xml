@@ -17,6 +17,7 @@
     <groupId>com.gitee.hengboy</groupId>
     <artifactId>spring-boot-starter-micro-job</artifactId>
     <version>0.0.2.SNAPSHOT</version>
+
     <name>spring-boot-starter-micro-job</name>
     <description>Demo project for Spring Boot</description>
 
