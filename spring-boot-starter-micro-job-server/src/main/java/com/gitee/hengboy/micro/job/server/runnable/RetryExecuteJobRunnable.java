@@ -76,7 +76,12 @@ public class RetryExecuteJobRunnable implements Runnable {
                 if (executeDetailRecord != null) {
                     // 绑定的节点集合
                     ConcurrentMap bindNodes = JobConstants.TRIGGER_NODE_BIND.get(executeDetailRecord.getNedTriggerKey());
-
+                    // 重试次数内
+                    // 不存在执行节点，放入重试执行队列
+                    if (executeDetailRecord.getNedRetryCount() < configRetryMaxCount || bindNodes == null || bindNodes.size() == 0) {
+                        JobConstants.JOB_RECOVERY_RETRY_QUEUE.put(executeDetailRecord);
+                        continue;
+                    }
                     // 重试次数内执行 & 存在触发器执行节点
                     if (executeDetailRecord.getNedRetryCount() < configRetryMaxCount && bindNodes != null && bindNodes.size() > 0) {
                         // 设置重试次数
@@ -90,11 +95,6 @@ public class RetryExecuteJobRunnable implements Runnable {
                     // 更新执行信息为ERROR
                     else if (executeDetailRecord.getNedRetryCount() >= configRetryMaxCount && bindNodes != null && bindNodes.size() > 0) {
                         jobNodeExecuteDetailService.updateStatus(executeDetailRecord.getNedId(), JobExecuteStatusEnum.ERROR.toString());
-                    }
-                    // 重试次数内
-                    // 不存在执行节点，放入重试执行队列
-                    else if (executeDetailRecord.getNedRetryCount() < configRetryMaxCount && (bindNodes == null || bindNodes.size() == 0)) {
-                        JobConstants.JOB_RECOVERY_RETRY_QUEUE.put(executeDetailRecord);
                     }
                     // 更新重试次数
                     jobNodeExecuteDetailService.updateRetryCount(executeDetailRecord.getNedId(), executeDetailRecord.getNedRetryCount());

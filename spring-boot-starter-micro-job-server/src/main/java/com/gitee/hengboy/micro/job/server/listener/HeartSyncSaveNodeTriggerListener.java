@@ -123,6 +123,13 @@ public class HeartSyncSaveNodeTriggerListener implements SmartApplicationListene
                                     logger.debug("Task node [{}:{}], trigger: {}, execute self-startup.", jobNode.getIpAddress(), jobNode.getPort(), trigger.getTriggerKey());
                                     jobExecuteService.startJob(trigger.getTriggerKey(), null);
                                 }
+                                // 判断任务已经存在时
+                                else if (jobExecuteService.exist(trigger.getTriggerKey())) {
+                                    // 如果本次上报的autoStart为false，执行删除任务
+                                    if (!trigger.isAutoStart()) {
+                                        jobExecuteService.removeJob(trigger.getTriggerKey());
+                                    }
+                                }
                             }
                             // 遇到异常时清空缓存信息
                             catch (Exception e) {
