@@ -1,5 +1,3 @@
-[TOC]
-
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/weibocom/motan/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/com.gitee.hengboy/spring-boot-starter-micro-job.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.gitee.hengboy/spring-boot-starter-micro-job-server)
 
 ## 基本介绍
