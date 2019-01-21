@@ -1,0 +1,4 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.gitee.hengboy.micro.job.server.configuration.JobServerAutoConfiguration,\
+  com.gitee.hengboy.micro.job.server.configuration.JobQuartzAutoConfiguration  
