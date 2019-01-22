@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>micro-job-example</artifactId>
+        <groupId>com.gitee.hengboy</groupId>
+        <version>0.0.2.SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <description>
+        micro job 服务端示例
+    </description>
+    <artifactId>micro-job-example-server</artifactId>
+
+    <dependencies>
+        <!--micro job server-->
+        <dependency>
+            <groupId>com.gitee.hengboy</groupId>
+            <artifactId>spring-boot-starter-micro-job-server</artifactId>
+            <version>0.0.1.RELEASE</version>
+        </dependency>
+        <!--web-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
+</project>
