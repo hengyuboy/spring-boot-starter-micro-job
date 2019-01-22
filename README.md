@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/weibocom/motan/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/com.gitee.hengboy/spring-boot-starter-micro-job.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.gitee.hengboy/spring-boot-starter-micro-job-server) ![](https://img.shields.io/badge/JDK-1.8+-green.svg) ![](https://img.shields.io/badge/springBoot-1.4+_1.5+_2.0+-green.svg) 
+[![Build Status](https://travis-ci.org/hengyuboy/spring-boot-starter-micro-job.svg?branch=master)](https://travis-ci.org/hengyuboy/spring-boot-starter-micro-job) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/weibocom/motan/blob/master/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/com.gitee.hengboy/spring-boot-starter-micro-job.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.gitee.hengboy/spring-boot-starter-micro-job-server) ![](https://img.shields.io/badge/JDK-1.8+-green.svg) ![](https://img.shields.io/badge/springBoot-1.4+_1.5+_2.0+-green.svg) 
 
 ## 基本介绍
 
